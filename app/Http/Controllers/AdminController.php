@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\empleados;
 
 class AdminController extends Controller
 {
@@ -13,7 +14,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.admin');
+        $s = empleados::all();
+ 
+        //return response()->json(['data' => $s]);
+        return view('admin.admin')->with("employees", $s);
     }
 
     /**
@@ -43,9 +47,12 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $s = empleados::all();
+ 
+        return response()->json(['data' => $s]);
+        
     }
 
     /**
