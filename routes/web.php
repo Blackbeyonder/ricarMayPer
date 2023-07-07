@@ -19,6 +19,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
      * Home Routes
      */
     Route::get('/', 'HomeController@index')->name('home.index');
+    
 
     Route::group(['middleware' => ['guest']], function() {
         /**
@@ -40,5 +41,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          * Logout Routes
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
+        Route::get('/admin', 'adminController@index')->name('admin.index');
     });
 });
