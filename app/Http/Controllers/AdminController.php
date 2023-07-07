@@ -38,6 +38,12 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
+        return $request;
+        // return view('admin.form_employee');
+    }
+
+    public function form(Request $request)
+    {
         return view('admin.form_employee');
     }
 
