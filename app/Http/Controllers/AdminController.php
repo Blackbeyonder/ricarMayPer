@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\empleados;
+use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
@@ -38,8 +39,22 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
-        // return view('admin.form_employee');
+      
+        $empleados = empleados::create(
+            [
+                'clave_del_empleado' => 'asd',
+                'nombre' => $request->nombre,
+                'edad' => $request->edad,
+                'fecha_nacimiento' => $request->fecha_nacimiento,
+                'genero' => $request->genero,
+                'sueldo_base' => $request->sueldo_base,
+            ]
+        );
+        
+        $s = empleados::all();
+ 
+        //return response()->json(['data' => $s]);
+        return view('admin.admin')->with("employees", $s);
     }
 
     public function form(Request $request)

@@ -10,4 +10,5 @@ class empleados extends Model
     use HasFactory;
 
     protected $table = 'empleados';
+    protected $guarded = [];
 }

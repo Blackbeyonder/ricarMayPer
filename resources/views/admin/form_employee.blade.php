@@ -6,7 +6,7 @@
     <input type="text" class="form-control" id="exampleFormControlInput1"  name="nombre" id="" required>
     <br>
     <label>Fecha de nacimiento</label>
-    <input type="date" id="start" name="fecha" required>
+    <input type="date" id="start" name="fecha_nacimiento" required>
     <br>
     <label>Edad</label>
     <input type="number" type="text" class="form-control" name="edad" id="" required>
@@ -19,7 +19,7 @@
     </select >
     <br>
     <label>Sueldo base</label>
-    <input type="number" type="text" class="form-control" name="sueldo" id="" required>
+    <input type="number" type="text" class="form-control" name="sueldo_base" id="" required>
     <br>
 
     <label>Acerca de</label>
