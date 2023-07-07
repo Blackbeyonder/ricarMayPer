@@ -42,5 +42,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
          */
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
         Route::get('/admin', 'adminController@index')->name('admin.index');
+        Route::get('/form', 'adminController@store')->name('admin.form_employee');
     });
 });
