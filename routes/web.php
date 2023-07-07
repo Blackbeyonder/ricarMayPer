@@ -45,5 +45,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/form', 'adminController@form')->name('admin.form_employee');
 
         Route::post('/employee_store', 'adminController@store');
+
+        Route::get('/employee_delete', 'adminController@destroy')->name('admin.delete_employee');
     });
 });

@@ -50,7 +50,7 @@ class AdminController extends Controller
                 'sueldo_base' => $request->sueldo_base,
             ]
         );
-        
+
         $s = empleados::all();
  
         //return response()->json(['data' => $s]);
@@ -107,6 +107,6 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }

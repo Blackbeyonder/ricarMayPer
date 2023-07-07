@@ -10,9 +10,9 @@
         @auth
         <li><a  href="{{ route('admin.index') }}" class="nav-link px-2 text-white">Administrador</a></li>
         @endauth
-        <li><a href="form" class="nav-link px-2 text-white">Pricing</a></li>
+        <!-- <li><a href="form" class="nav-link px-2 text-white">Pricing</a></li>
         <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        <li><a href="#" class="nav-link px-2 text-white">About</a></li> -->
       </ul>
 
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
